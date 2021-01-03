@@ -8,7 +8,7 @@ file_extension = ".mp4"
 ignore_file = [list_file]
 ignore_file.extend(OS_file)
 file_delimiter = "-"
-
+test = []
 
 def read_file_list():
     f = open("./" + target_folder + "/" + list_file, 'r')

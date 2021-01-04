@@ -1,13 +1,29 @@
 import os
 
+# Variables
+
+# Number of digits preferred for sequential files
 digit_prefix = 3
+
+# Filename of the list file containing the filename details
 list_file = "list.txt"
+
+# directory name containing the sequential files to be renamed
 target_folder = "target"
+
+# File to be ignored
 OS_file = [".DS_Store"]
-file_extension = ".mp4"
+
+# List of files to be ignored
 ignore_file = [list_file]
 ignore_file.extend(OS_file)
+
+# File extension of the sequential files
+file_extension = ".mp4"
+
+# File Sequence delimiter
 file_delimiter = "-"
+
 
 def read_file_list():
     f = open("./" + target_folder + "/" + list_file, 'r')

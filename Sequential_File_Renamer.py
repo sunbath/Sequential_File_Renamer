@@ -24,7 +24,9 @@ file_extension = ".mp4"
 # File Sequence delimiter
 file_delimiter = "-"
 
+# Functions
 
+# Function to read the file list for the list.txt file
 def read_file_list():
     f = open("./" + target_folder + "/" + list_file, 'r')
     lines = f.read().splitlines()
@@ -42,8 +44,8 @@ def read_file_list():
             x[seq_num] = video_name
     return x
 
-
-def read_file_name(file_list):
+# Function to read the original files and get the corresponding file details from the list.txt, then rename the files.
+def file_renamer(file_list):
     path = './' + target_folder
     for root, directories, files in os.walk(path, topdown=False,):
         for file in files:
@@ -64,7 +66,7 @@ def read_file_name(file_list):
 def main():
     file_list = read_file_list()
     # print(file_list)
-    read_file_name(file_list)
+    file_renamer(file_list)
 
 
 if __name__ == "__main__":
